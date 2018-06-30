@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  econ_sim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/lib/app
+    environment:
+      TEST_VAR:  chickensalt
+    entrypoint: /bin/bash
+    
